@@ -1,0 +1,7 @@
+name: mob_suite
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - mob_suite=3.0.3
