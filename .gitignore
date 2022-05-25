@@ -1,3 +1,4 @@
 /.snakemake/
 /.idea/
 /logs/
+/sample_data/out/
