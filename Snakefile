@@ -43,7 +43,8 @@ rule run_mob_recon:
         mem_mb=lambda wildcards, attempt: 4000 * attempt
     log:
         "logs/run_mob_recon/{assembly_batch}.log"
-    conda: "envs/mob_suite.yaml"
+    container:
+        config["mob_suite_container"]
     shell:
         """
         mkdir -p {output.batch_output}

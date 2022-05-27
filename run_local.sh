@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-snakemake -j4 --use-conda -p
+snakemake -j4 --use-singularity -p

@@ -1,2 +1,3 @@
 assemblies_dir: sample_data/Assemblies
 out_dir: sample_data/out
+mob_suite_container: docker://kbessonov/mob_suite:3.0.3
