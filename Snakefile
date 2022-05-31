@@ -40,7 +40,7 @@ rule run_mob_recon:
         batch_output = directory(f"{config['out_dir']}/mob_recon/{{assembly_batch}}")
     threads: 1
     resources:
-        mem_mb=lambda wildcards, attempt: 4000 * attempt
+        mem_mb=lambda wildcards, attempt: 10000 * attempt
     log:
         "logs/run_mob_recon/{assembly_batch}.log"
     container:
