@@ -45,6 +45,8 @@ rule run_mob_recon:
         "logs/run_mob_recon/{assembly_batch}.log"
     container:
         config["mob_suite_container"]
+    params:
+        mob_recon_args = config["mob_recon_args"]
     shell:
         """
         mkdir -p {output.batch_output}
@@ -52,6 +54,6 @@ rule run_mob_recon:
         do
             sample_name=$(basename -- $file)
             sample_name="${{sample_name%.*}}"
-            mob_recon --infile $file --outdir {output.batch_output}/${{sample_name}} -t -c -n {threads} 2>>{log}
+            mob_recon {params.mob_recon_args} -n {threads} --infile $file --outdir {output.batch_output}/${{sample_name}} 2>>{log}
         done
         """

@@ -1,3 +1,11 @@
+########################################################################################
+# input/output configs
 assemblies_dir: sample_data/Assemblies
 out_dir: sample_data/out
-mob_suite_container: docker://kbessonov/mob_suite:3.0.3
+########################################################################################
+
+########################################################################################
+# mob_recon configs
+mob_suite_container: docker://quay.io/biocontainers/mob_suite:3.1.6--pyh7cba7a3_1
+mob_recon_args: "--run_overhang"
+########################################################################################
